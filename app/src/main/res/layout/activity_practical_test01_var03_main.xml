@@ -11,8 +11,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
+        <EditText
             android:id="@+id/textView"
+            android:saveEnabled="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -43,8 +44,9 @@
 
         </LinearLayout>
 
-        <TextView
+        <EditText
             android:id="@+id/textView4"
+            android:saveEnabled="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -55,20 +57,21 @@
 
         <TextView
             android:id="@+id/textView6"
+            android:saveEnabled="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:editable="true"
-            android:text="TextView" />
+            android:text="0" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="ed"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:editable="false"
             android:text="NAVIGATE TO SECONDARY ACTIVITY" />
