@@ -41,6 +41,10 @@ public class PracticalTest01Var03MainActivity extends AppCompatActivity {
                         text3.setText(text1.getText().toString() + " - " +
                                 text2.getText().toString() + " = " + dif);
                         break;
+                    case R.id.button3:
+                        Intent intent = new Intent(getApplicationContext(), PracticalTest01Var03SecondaryActivity.class);
+                        startActivityForResult(intent, Constants.SECONDARY_ACTIVITY_REQUEST_CODE);
+                        break;
                 }
             } catch (NumberFormatException e) {
                 Toast.makeText(getApplicationContext(), "One of inputs is not number",
@@ -97,6 +101,14 @@ public class PracticalTest01Var03MainActivity extends AppCompatActivity {
             }
             Toast.makeText(getApplicationContext(), text3.getText().toString(),
                                                                 Toast.LENGTH_LONG).show();
+        }
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+        if (requestCode == Constants.SECONDARY_ACTIVITY_REQUEST_CODE) {
+            Toast.makeText(this, "The activity returned with result " +
+                    resultCode, Toast.LENGTH_LONG).show();
         }
     }
 }
